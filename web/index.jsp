@@ -31,7 +31,7 @@
     <h2>Przelicznik metryczny</h2>
 </div>
 <div class="measure-form">
-    <form action="/metric-converter" method="post">
+    <form action="/metric-converter">
         <div class="form-group">
             <input type="text" class="form-control" placeholder="metry" name="meterValue">
         </div>
@@ -48,7 +48,7 @@
     <h2>Przelicznik wag</h2>
 </div>
 <div class="measure-form">
-    <form action="/weight-converter" method="post">
+    <form action="/weight-converter">
         <div class="form-group">
             <input type="text" class="form-control" placeholder="kilogramy" name="kilogramValue">
         </div>
