@@ -4,32 +4,26 @@ import java.math.BigDecimal;
 
 public class MetricMeasureConversionService {
     public BigDecimal convertMetersToCentimeters(BigDecimal mValue) {
-        BigDecimal cmValue = mValue.multiply(BigDecimal.valueOf(100));
-        return cmValue;
+        return mValue.multiply(BigDecimal.valueOf(100));
     }
 
     public BigDecimal convertMetersToMillimeters(BigDecimal mValue) {
-        BigDecimal mmValue = mValue.multiply(BigDecimal.valueOf(1000));
-        return mmValue;
+        return mValue.multiply(BigDecimal.valueOf(1000));
     }
 
     public BigDecimal convertCentimetersToMeters(BigDecimal cmValue) {
-        BigDecimal mValue = cmValue.divide(BigDecimal.valueOf(100));
-        return mValue;
+        return cmValue.divide(BigDecimal.valueOf(100));
     }
 
     public BigDecimal convertCentimetersToMillimeters(BigDecimal cmValue) {
-        BigDecimal mmValue = cmValue.multiply(BigDecimal.valueOf(10));
-        return mmValue;
+        return cmValue.multiply(BigDecimal.valueOf(10));
     }
 
     public BigDecimal convertMillimetersToCentimeters(BigDecimal mmValue) {
-        BigDecimal cmValue = mmValue.divide(BigDecimal.valueOf(10));
-        return cmValue;
+        return mmValue.divide(BigDecimal.valueOf(10));
     }
 
     public BigDecimal convertMillimetersToMeters(BigDecimal mmValue) {
-        BigDecimal mValue = mmValue.divide(BigDecimal.valueOf(1000));
-        return mValue;
+        return mmValue.divide(BigDecimal.valueOf(1000));
     }
 }

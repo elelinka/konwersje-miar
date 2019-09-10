@@ -4,32 +4,26 @@ import java.math.BigDecimal;
 
 public class WeightMeasureConversionService {
     public BigDecimal convertKilogramsToGrams(BigDecimal kgValue) {
-        BigDecimal gmValue = kgValue.multiply(BigDecimal.valueOf(1000));
-        return gmValue;
+        return kgValue.multiply(BigDecimal.valueOf(1000));
     }
 
     public BigDecimal convertKilogramsToMilligrams(BigDecimal kgValue) {
-        BigDecimal mgValue = kgValue.multiply(BigDecimal.valueOf(1000000));
-        return mgValue;
+        return kgValue.multiply(BigDecimal.valueOf(1000000));
     }
 
     public BigDecimal convertGramsToKilograms(BigDecimal gmValue) {
-        BigDecimal kgValue = gmValue.divide(BigDecimal.valueOf(1000));
-        return kgValue;
+        return gmValue.divide(BigDecimal.valueOf(1000));
     }
 
     public BigDecimal convertGramsToMilligrams(BigDecimal gmValue) {
-        BigDecimal mgValue = gmValue.multiply(BigDecimal.valueOf(1000));
-        return mgValue;
+        return gmValue.multiply(BigDecimal.valueOf(1000));
     }
 
     public BigDecimal convertMilligramsToGrams(BigDecimal mgValue) {
-        BigDecimal gmValue = mgValue.divide(BigDecimal.valueOf(1000));
-        return gmValue;
+        return mgValue.divide(BigDecimal.valueOf(1000));
     }
 
     public BigDecimal convertMilligramsToKilograms(BigDecimal mgValue) {
-        BigDecimal kgValue = mgValue.divide(BigDecimal.valueOf(1000000));
-        return kgValue;
+        return mgValue.divide(BigDecimal.valueOf(1000000));
     }
 }
