@@ -1,22 +1,35 @@
 package com.example.konwersjemiar.service;
 
+import java.math.BigDecimal;
+
 public class MetricMeasureConversionService {
-    public double convertMetersToCentimeters(double mValue) {
-        double cmValue = mValue * 100;
+    public BigDecimal convertMetersToCentimeters(BigDecimal mValue) {
+        BigDecimal cmValue = mValue.multiply(BigDecimal.valueOf(100));
         return cmValue;
     }
-    public double convertMetersToMillimeters(double mValue) {
-        double mmValue = mValue * 1000;
+
+    public BigDecimal convertMetersToMillimeters(BigDecimal mValue) {
+        BigDecimal mmValue = mValue.multiply(BigDecimal.valueOf(1000));
         return mmValue;
     }
 
-    public double convertCentimetersToMeters(double cmValue) {
-        double mValue = cmValue / 100;
+    public BigDecimal convertCentimetersToMeters(BigDecimal cmValue) {
+        BigDecimal mValue = cmValue.divide(BigDecimal.valueOf(100));
         return mValue;
     }
 
-    public double convertCentimetersToMillimeters(double cmValue) {
-        double mmValue = cmValue * 100;
+    public BigDecimal convertCentimetersToMillimeters(BigDecimal cmValue) {
+        BigDecimal mmValue = cmValue.multiply(BigDecimal.valueOf(10));
         return mmValue;
+    }
+
+    public BigDecimal convertMillimetersToCentimeters(BigDecimal mmValue) {
+        BigDecimal cmValue = mmValue.divide(BigDecimal.valueOf(10));
+        return cmValue;
+    }
+
+    public BigDecimal convertMillimetersToMeters(BigDecimal mmValue) {
+        BigDecimal mValue = mmValue.divide(BigDecimal.valueOf(1000));
+        return mValue;
     }
 }
